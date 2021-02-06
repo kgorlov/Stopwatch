@@ -1,5 +1,34 @@
-import React from "react"
+
 import {render} from "react-dom"
+import React, {Component} from 'react'
+
+class StartStopButton extends Component {
+    state = {
+        isOpen: true
+    }
+
+    render() {
+        const {article} = this.props
+        const body = this.state.isOpen && <section>{article}</section>
+        return (
+            <div>
+                <h2>
+                    {article}
+                    <button onClick={this.handleClick}>
+                        {this.state.isOpen ? 'start' : 'stop'}
+                    </button>
+                </h2>
+                {body}
+            </div>
+        )
+    }
+
+    handleClick = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
+}
 
 function Stopwatch()
 {
@@ -11,14 +40,7 @@ function Stopwatch()
         </div>
     )
 }
-function StartStopButton()
-{
-    return(
-        <div>
-            <button>start</button>
-        </div>
-    )
-}
+
 function ResetButton()
 {
     return(
