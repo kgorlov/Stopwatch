@@ -4,14 +4,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Запуск приложения
 
 В директории проекта:
 
-### `npm start`
-
-Запуск приложения в dev-режиме.\
-Открыть [http://localhost:3000](http://localhost:3000) в браузере.
+1. склонировать
+2. установить зависимости, выполнить ``npm install``
+3. `npm start` запустит приложение в dev-режиме.\
+ Открыть [http://localhost:3000](http://localhost:3000) в браузере.
 
 ### `npm run build`
 
