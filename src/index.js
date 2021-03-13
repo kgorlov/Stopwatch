@@ -17,14 +17,17 @@ class Stopwatch extends Component {
 
         return(
             <div style={{textAlign: "center"}}>
-                <h1 style={{ padding: "10px 20px", textAlign: "center", color: "black"}}>{this.state.minutes}:{this.state.seconds}:{this.state.msecondss}</h1>
+                <h1 style={{ padding: "10px 20px", textAlign: "center", color: "black", fontFamily: "Bebas Neue", fontSize: "200px"}}>{this.state.minutes}:{this.state.seconds}:{this.state.msecondss}</h1>
 
-                <StartStopButton
-                    isStarted={this.state.isStarted} 
-                    onStartBtn={this.handleClick.bind(this)}
-                />
+
                 <ResetButton
                     onResetBtn={this.resetClick.bind(this)}
+                />
+                <StartStopButton
+
+
+                    isStarted={this.state.isStarted} 
+                    onStartBtn={this.handleClick.bind(this)}
                 />
             </div>
         )
@@ -67,7 +70,7 @@ class Stopwatch extends Component {
 
             if (this.state.seconds == 59) {
                 this.setState({ seconds: 0,minutes: this.state.minutes + 1});
-            }
+            } 
         }
     }
 }
@@ -80,7 +83,7 @@ class StartStopButton extends Component {
         return (
             <div>
                 <h2>
-                    <button onClick={onStartBtn}>
+                    <button style={{fontFamily: "Bebas Neue", width: "80%", height: "200px"}} onClick={onStartBtn}>
                         {isStarted ? 'stop' : 'start'}
                     </button>
                     
@@ -100,7 +103,7 @@ class ResetButton extends Component {
         return (
             <div>
                 <h2>
-                    <button onClick={onResetBtn}>
+                    <button style={{fontFamily: "Bebas Neue"}} onClick={onResetBtn}>
                         reset
                     </button>
                 </h2>
