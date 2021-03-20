@@ -1,0 +1,49 @@
+.startstop_button {
+    font-family: "Bebas Neue";
+    width: 80%;
+    height: 200px;
+    font-size: 100px;
+    text-align: center;
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
+}
+
+.reset_button {
+    font-family: "Bebas Neue";
+    width: 80%;
+    height: 200px;
+    font-size: 100px;
+    text-align: center;
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.footer {
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  #root {
+  /* width: clamp(45ch, 50%, 75ch);
+    display: flex;   */
+  }
+
+  body {
+    /* display: grid;
+    place-items: center; */
+    /* height: 100vh; */
+  }
+
+  .tablo {
+    /* padding: 20% 20%; */
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: "Bebas Neue";
+    font-size: 10rem;
+    border: 1px solid blue;
+  }

@@ -3,6 +3,7 @@ import {render} from "react-dom"
 import React, {Component} from 'react'
 
 
+
 class Stopwatch extends Component {
 
     state = {
@@ -17,9 +18,8 @@ class Stopwatch extends Component {
 
         return(
             <div style={{textAlign: "center"}}>
-                <h1 style={{ padding: "10px 20px", textAlign: "center", color: "black", fontFamily: "Bebas Neue", fontSize: "200px"}}>{this.state.minutes}:{this.state.seconds}:{this.state.msecondss}</h1>
-
-
+                <div class="tablo">{this.state.minutes}:{this.state.seconds}:{this.state.msecondss}</div>
+              
                 <ResetButton
                     onResetBtn={this.resetClick.bind(this)}
                 />
@@ -48,7 +48,8 @@ class Stopwatch extends Component {
         this.setState({
             minutes : this.state.minutes = 0,
             seconds : this.state.seconds = 0,
-            isStarted : !this.state.isStarted
+            msecondss : this.state.msecondss = 0,
+            isStarted : false
         })
     }
     componentDidMount() {
@@ -82,12 +83,12 @@ class StartStopButton extends Component {
         const {isStarted, onStartBtn} = this.props
         return (
             <div>
-                <h2>
-                    <button style={{fontFamily: "Bebas Neue", width: "80%", height: "200px"}} onClick={onStartBtn}>
-                        {isStarted ? 'stop' : 'start'}
+                
+                    <button class="startstop_button" onClick={onStartBtn}>
+                        <span>{isStarted ? 'stop' : 'start'}</span>
                     </button>
                     
-                </h2>
+                
             </div>
         )
     }
@@ -103,7 +104,7 @@ class ResetButton extends Component {
         return (
             <div>
                 <h2>
-                    <button style={{fontFamily: "Bebas Neue"}} onClick={onResetBtn}>
+                    <button class="reset_button"  onClick={onResetBtn}>
                         reset
                     </button>
                 </h2>
