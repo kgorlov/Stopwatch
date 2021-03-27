@@ -11,14 +11,35 @@ class Stopwatch extends Component {
         isStarted : false,
         seconds : 0,
         minutes : 0,
-        msecondss : 0
+        msecondss : 0,
+        secondsString : "rabs",
+        minutesString : "rabs",
+        msecondssString : "rabs"
     }
     
     render(){
+        if(this.state.msecondss <= 9)
+        {
+            this.state.msecondssString = "0"+this.state.msecondss;
+        }else{
+            this.state.msecondssString = this.state.msecondss;
+        }
+        if(this.state.seconds <= 9)
+        {
+            this.state.secondsString = "0"+this.state.seconds;
+        }else{
+            this.state.secondsString = this.state.seconds;
+        }
+        if(this.state.minutes <= 9)
+        {
+            this.state.minutesString = "0"+this.state.minutes;
+        }else{
+            this.state.minutesString = this.state.minutes;
+        }
 
         return(
             <div style={{textAlign: "center"}}>
-                <div class="tablo">{this.state.minutes}:{this.state.seconds}:{this.state.msecondss}</div>
+                <div class="tablo">{this.state.minutesString}:{this.state.secondsString}:{this.state.msecondssString}</div>
               
                 <ResetButton
                     onResetBtn={this.resetClick.bind(this)}
