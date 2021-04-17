@@ -106,7 +106,7 @@ class StartStopButton extends Component {
             <div>
                 
                     <button class="startstop_button" onClick={onStartBtn}>
-                        <span>{isStarted ? 'stop' : 'start'}</span>
+                        <span>{isStarted ? 'Стоп' : 'Старт'}</span>
                     </button>
                     
                 
@@ -126,7 +126,7 @@ class ResetButton extends Component {
             <div>
                 <h2>
                     <button class="reset_button"  onClick={onResetBtn}>
-                        reset
+                        Сброс
                     </button>
                 </h2>
             </div>
